@@ -11,10 +11,10 @@
   --color-neutral-grey-900: hsl(213, 19%, 18%);
   --color-neutral-grey-950: hsl(216, 12%, 8%);
 
-  --gradient-grey-to-white: linear-gradient(
-    to bottom,
-    hsl(215, 20%, 17%),
-    hsl(216, 24%, 12%)
+  --gradient-grey-gradient: radial-gradient(
+    circle at center,
+    hsl(215, 20%, 17%) 0%,
+    hsl(216, 24%, 12%) 100%
   );
 }
 
