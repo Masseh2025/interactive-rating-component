@@ -2,8 +2,9 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@radix-ui/react-label";
 import iconStar from "/assets/images/icon-star.svg";
 import { useState } from "react";
+import SubmittedForm from "./components/SubmittedForm";
 
-type ActiveIndex = "one" | "two" | "three" | "four" | "five";
+export type ActiveIndex = "one" | "two" | "three" | "four" | "five";
 function App() {
   const [activeIndex, setActiveIndex] = useState<ActiveIndex>("one");
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -70,7 +71,9 @@ function App() {
               </button>
             </form>
           </>
-        ) : null}
+        ) : (
+          <SubmittedForm rating={activeIndex} />
+        )}
       </div>
     </main>
   );
