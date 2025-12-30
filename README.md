@@ -1,1 +1,1 @@
-# React + TypeScript + Vite + Tailwind + Shadcn + Cursor
+# React + TypeScript + Vite + Tailwind + Shadcn + Cursor + motion

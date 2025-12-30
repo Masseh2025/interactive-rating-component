@@ -1,5 +1,6 @@
 import type { ActiveIndex } from "@/App";
 import iconThankYou from "/assets/images/illustration-thank-you.svg";
+import { motion } from "motion/react";
 
 const ratings = {
   one: "1",
@@ -11,7 +12,14 @@ const ratings = {
 
 export default function SubmittedForm({ rating }: { rating: ActiveIndex }) {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <motion.div
+      layout
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col items-center justify-center min-h-72"
+    >
       <img
         src={iconThankYou}
         alt="illustration of a thank you"
@@ -27,6 +35,6 @@ export default function SubmittedForm({ rating }: { rating: ActiveIndex }) {
         We appreciate you taking the time to give a rating. If you ever need
         more support, don't hesitate to get in touch!
       </p>
-    </div>
+    </motion.div>
   );
 }
